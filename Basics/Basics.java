@@ -73,10 +73,48 @@ public class Basics{
         }
         return count;
     }
-    public int[] squareArr(int[] arr){
+    public ArrayList<Integer> squareArr(int[] arr){
+        ArrayList<Integer> new_arr = new ArrayList<Integer>();
         for(Integer idx : arr){
-            idx = idx * idx;
+            new_arr.add(idx*idx);
         }
-        return arr;
+        return new_arr;
+    }
+    public ArrayList<Integer> noNeg(int[] arr){
+        ArrayList<Integer> new_arr = new ArrayList<Integer>();
+        for(Integer idx : arr){
+            if(idx > 0){
+                new_arr.add(idx);
+            } else {
+                new_arr.add(0);
+            }
+        }
+        return new_arr;
+    }
+    public ArrayList<Integer> maxMinAvg(int[] arr){
+        ArrayList<Integer> new_arr = new ArrayList<Integer>();
+        Integer max = arr[0];
+        Integer min = arr[0];
+        Integer sum = 0;
+        for(Integer idx : arr){
+            if(idx > max){
+                max = idx;
+            } else if(idx < min) {
+                min = idx;
+            }
+            sum += idx;
+        }
+        new_arr.add(max);
+        new_arr.add(min);
+        new_arr.add(sum/arr.length);
+        return new_arr;
+    }
+    public ArrayList<Integer> shiftArr(int[] arr){
+        ArrayList<Integer> new_arr = new ArrayList<Integer>();
+        for(Integer idx = 1; idx < arr.length; idx++){
+            new_arr.add(arr[idx]);
+        }
+        new_arr.add(0);
+        return new_arr;
     }
 }

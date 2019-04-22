@@ -20,8 +20,16 @@ public class BasicsTest{
         Integer val = 3;
         Integer count = basics.greaterThanY(y_arr, val);
         System.out.println(count);
-        int[] square_arr = {1, 5, 10, -2};
-        square_arr = basics.squareArr(square_arr);
-        System.out.println(square_arr);
+        int[] squareArr = {1,5,10,-2};
+        ArrayList<Integer> squaredArr = basics.squareArr(squareArr);
+        System.out.println(squaredArr);
+        int[] orig = {1,5,10,-2};
+        ArrayList<Integer> noNeg = basics.noNeg(orig);
+        System.out.println(noNeg);
+        ArrayList<Integer> maxMinAvg = basics.maxMinAvg(orig);
+        System.out.println(maxMinAvg);
+        int[] arrShift = {1,5,7,10,-2};
+        ArrayList<Integer> shifted = basics.shiftArr(arrShift);
+        System.out.println(shifted);
     }
 }
