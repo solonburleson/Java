@@ -1,6 +1,8 @@
-public class MammalTest{
-    public static void main(String args[]){
-        Gorilla joe = new Gorilla();
+
+public class MammalTest {
+
+	public static void main(String[] args) {
+		Gorilla joe = new Gorilla();
         joe.throwSomething();
         joe.showEnergy();
         joe.throwSomething();
@@ -13,5 +15,7 @@ public class MammalTest{
         joe.showEnergy();
         joe.climb();
         joe.showEnergy();
-    }
+
+	}
+
 }
