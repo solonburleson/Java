@@ -5,11 +5,10 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Date</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/date.js"></script>
+	<title>Add Two</title>
 </head>
 <body>
-	<h1 id="date"><c:out value="${date}" /></h1>
+	<p>Added two to the count.  Count: <c:out value="${count}" /> </p>
+	<a href="/counter">Back to Counter</a>
 </body>
 </html>

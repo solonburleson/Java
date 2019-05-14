@@ -5,11 +5,16 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Date</title>
+	<title>Secret Code</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/date.js"></script>
 </head>
 <body>
-	<h1 id="date"><c:out value="${date}" /></h1>
+	<p id="error"><c:out value="${error}" /></p>
+	<p>What is the code?</p>
+	<form action="/check" method="POST">
+		<label for="code">Code:</label>
+		<input type="text" name="code"/>
+		<input type="submit" />
+	</form>
 </body>
 </html>

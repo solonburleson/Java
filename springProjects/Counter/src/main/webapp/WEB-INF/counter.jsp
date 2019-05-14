@@ -5,11 +5,12 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Date</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/date.js"></script>
+	<title>Counter</title>
 </head>
 <body>
-	<h1 id="date"><c:out value="${date}" /></h1>
+	<p>You have visited the home page <c:out value="${count}" /> times</p>
+	<a href="/">Add to count</a>
+	<a href="/add2">Add 2 to Count</a>
+	<a href="/reset">Reset Counter</a>
 </body>
 </html>

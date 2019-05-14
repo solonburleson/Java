@@ -5,11 +5,12 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Date</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/date.js"></script>
+	<title>Results</title>
 </head>
 <body>
-	<h1 id="date"><c:out value="${date}" /></h1>
+	<p>Your Name: <c:out value="${name}" /></p>
+	<p>Dojo Location: <c:out value="${dojo}" /></p>
+	<p>Favorite Language: <c:out value="${lang}" /></p>
+	<p>Comments: (optional) <c:out value="${comment}" /></p>
 </body>
 </html>
