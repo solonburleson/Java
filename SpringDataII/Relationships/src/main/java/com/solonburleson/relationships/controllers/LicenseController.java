@@ -38,7 +38,23 @@ public class LicenseController {
 		if(result.hasErrors()) {
 			return "newlicense.jsp";
 		} else {
+			String number = "";
+			Integer num = licenseService.licenseCount() + 1;
+			String numStr = num.toString();
+			for(int i = 0; i < (6-numStr.length()); i++) {
+				number += "0";
+			}
+			number += numStr;
+			license.setNumber(number);
+			licenseService.newLicense(license);
 			return "redirect:/";
 		}
+	}
+	
+	@RequestMapping("/license")
+	public String index(Model model) {
+		List<License> all = licenseService.allLicense();
+		model.addAttribute("licenses", all);
+		return "index.jsp";
 	}
 }

@@ -18,4 +18,14 @@ public class LicenseService {
 	public List<License> allLicense(){
 		return licenseRepo.findAll();
 	}
+	
+	public Integer licenseCount() {
+		Integer number = 0;
+		number = licenseRepo.findAll().size();
+		return number;
+	}
+	
+	public void newLicense(License license) {
+		licenseRepo.save(license);
+	}
 }

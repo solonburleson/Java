@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +14,11 @@
 	    <p>
 	        <form:label path="person">Person</form:label>
 	        <form:errors path="person"/>
-	        <form:select path="person" items="${personList}"/>
-	        	
+	        <c:forEach items="${personList}" var="person">
+	        	<form:select path="person">
+	        		<form:option label="${person.firstName} ${person.lastName}" value="${person.id}" />
+	        	</form:select>
+	        </c:forEach>	
 	    </p>
 	    <p>
 	        <form:label path="state">State</form:label>
@@ -24,7 +28,7 @@
 	    <p>
 	        <form:label path="expirationDate">Expiration</form:label>
 	        <form:errors path="expirationDate"/>
-	        <form:input path="expirationDate"/>
+	        <form:input type="date" path="expirationDate"/>
 	    </p>   
 	    <input type="submit" value="Submit"/>
 	</form:form> 
